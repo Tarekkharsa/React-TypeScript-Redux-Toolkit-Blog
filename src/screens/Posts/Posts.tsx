@@ -24,7 +24,11 @@ const Posts = () => {
   const navigate = useNavigate();
 
   if (isLoading) {
-    return <Spinner showSpinner={isLoading} />;
+    return (
+      <div className="flex justify-center items-center">
+        <Spinner showSpinner={isLoading} />
+      </div>
+    );
   }
 
   if (!posts) {

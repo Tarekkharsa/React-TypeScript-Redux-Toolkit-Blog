@@ -13,6 +13,8 @@ import {
 import ErrorPage from "./screens/ErrorPage";
 import PostsManager from "./screens/Posts/Posts";
 import { PostDetail } from "./screens/Posts/PostDetail";
+import AddPost from "./screens/Posts/addPost";
+import EditPost from "./screens/Posts/EditPost";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/posts/:id",
         element: <PostDetail />,
+      },
+      {
+        path: "/posts/add",
+        element: <AddPost />,
+      },
+      {
+        path: "/posts/edit/:id",
+        element: <EditPost />,
       },
       {
         path: "/",

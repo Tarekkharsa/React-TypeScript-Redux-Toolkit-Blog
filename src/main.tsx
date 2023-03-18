@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./screens/ErrorPage";
 import PostsManager from "./screens/Posts/Posts";
+import { PostDetail } from "./screens/Posts/PostDetail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         index: true,
         path: "/posts",
         element: <PostsManager />,
+      },
+      {
+        path: "/posts/:id",
+        element: <PostDetail />,
       },
       {
         path: "/",
